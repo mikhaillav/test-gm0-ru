@@ -2,16 +2,9 @@
 name: Update Translations
 on:
   workflow_dispatch:
-  push:
-    paths:
-    - '.github/workflows/update-translations.yml'
-    - 'scripts/update.sh'
-  schedule:
-    - cron:  '0 4,16 * * *'
 jobs:
   update-translations:
     runs-on: ubuntu-latest
-    if: github.repository == 'gamemanual0/gm0-translations'
     steps:
       - uses: actions/checkout@v3
         with:
@@ -52,3 +45,20 @@ jobs:
           commit_user_name: GitHub
           commit_user_email: noreply@github.com
           commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+      - name: Install Python Dependencies
+        run: |
+          pip install -r source/requirements.txt
+      - name: Install Graphviz
+        run: |
+          sudo apt update
+          sudo apt install -y graphviz
+      - name: Build HTML
+        run: |
+          make html
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/html/
+          force_orphan: true
