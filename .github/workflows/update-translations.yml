@@ -47,7 +47,7 @@ jobs:
           commit_author: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
       - name: Install Python Dependencies
         run: |
-          pip install -r source/requirements.txt
+          pip install -r gm0/source/requirements.txt
       - name: Install Graphviz
         run: |
           sudo apt update
