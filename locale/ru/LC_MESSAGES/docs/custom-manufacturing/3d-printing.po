@@ -3,16 +3,257 @@
 # This file is distributed under the same license as the Game Manual 0 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Darya Tepysheva, 2025
+# Соня Либерман, 2025
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Game Manual 0 0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-12 17:46+0000\n"
+"POT-Creation-Date: 2025-10-13 04:29+0000\n"
 "PO-Revision-Date: 2022-08-16 05:18+0000\n"
+"Last-Translator: Соня Либерман, 2025\n"
 "Language-Team: Russian (Russia) (https://app.transifex.com/gamemanual0/teams/148648/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:4
+msgid "3D Printing"
+msgstr "3D-печать"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:7
+msgid "Kinds of 3D Printing"
+msgstr "Виды 3D печати"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:9
+msgid ""
+"There are a few different kinds of 3D printing. FDM (Fused Deposition "
+"Modeling) (also known as Fused Filament Fabrication) extrudes a melted "
+"filament to create a part and is the most common type and the one we'll "
+"focus on in this guide. SLA (stereolithography) and SLS (Selective Laser "
+"Sintering) are both options for 3D printing plastics, but they are generally"
+" more complex, expensive, or hold other disadvantages in FTC\\ |reg| "
+"applications. For those reasons, they are not recommended."
+msgstr ""
+"Существует несколько различных видов 3D-печати. FDM (Моделирование "
+"Наплавленного Осаждения), также известная как FFF (Изготовление Плавленой "
+"Нити Накала) предполагает выдавливание расплавленного филамента для создания"
+" детали. Это наиболее распространённый тип печати, на котором мы "
+"сосредоточимся в этом руководстве. SLA (стереолитография) и SLS (селективное"
+" лазерное спекание) — это варианты 3D-печати пластиком, но они, как правило,"
+" более сложные, дорогие или имеют другие недостатки применения в FTC\\ "
+"|reg|. По этим причинам они не рекомендуются."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:11
+msgid ""
+"Metal 3D printing (SLS and others) is also becoming more and more available,"
+" but is not in the scope of this guide."
+msgstr ""
+"3D-печать металлом (SLS и другие) также становится все более доступной, "
+"однако не входит в рамки данного руководства."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:13
+msgid ""
+"Consider checking out `the FTC docs 3D printing section <https://ftc-"
+"docs.firstinspires.org/en/latest/manufacturing/3d_printing/index.html>`_, a "
+"guide for FDM 3D printing within the scope of FTC. It covers topics such as:"
+" bed adhesion, tolerances, designing for 3D printing, tuning, and hardware "
+"choices."
+msgstr ""
+"Рекомендуем ознакомиться с разделом о 3D-печати в документации FTC "
+"<https://ftc-"
+"docs.firstinspires.org/en/latest/manufacturing/3d_printing/index.html>_ — "
+"руководством по FDM 3D-печати в рамках FTC. В нём рассматриваются такие "
+"темы, как: адгезия к столу, допуски, моделирование под 3D-печать, калибровка"
+" и выбор оборудования."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:16
+msgid "Advantages of 3D Printing"
+msgstr "Преимущества 3D-печати"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:18
+msgid ""
+"3D printing allows for customizable sizing and perfect optimization; for "
+"example, teams can print a spool of the exact diameter needed for optimal "
+"speed, or a belt pulley with a certain number of teeth."
+msgstr ""
+"3D-печать позволяет создавать детали нестандартных размеров и добиваться "
+"идеальной оптимизации. Например, команды могут напечатать бобину строго "
+"определённого диаметра для максимальной скорости или шкив для ременной "
+"передачи с заданным количеством зубьев."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:19
+msgid ""
+"3D printing allows teams to adapt between kits and individual parts easily, "
+"as not all kits have adaptable mounts or brackets. A good example of this "
+"are the Nexus :term:`mecanum <Mecanum Wheel>` bore adapters that teams 3D "
+"print."
+msgstr ""
+"3D-печать позволяет командам легко комбинировать готовые наборы и отдельные "
+"детали, поскольку не все комплекты имеют регулируемые крепления или "
+"кронштейны. Хорошим примером служат переходные втулки для механических колес"
+" Nexus :term:`mecanum <Mecanum Wheel>` , которые команды печатают на "
+"3D-принтерах."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:20
+msgid ""
+"3D printing allows teams to fabricate parts that would otherwise be "
+"impossible with materials such as aluminum due to machining restrictions."
+msgstr ""
+"3D-печать позволяет изготавливать детали, которые в противном случае было бы"
+" невозможно сделать из таких материалов, как алюминий, из-за ограничений в "
+"механической обработке."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:21
+msgid ""
+"3D printing allows teams to have customizable strain relief on wires and "
+"connections. This is a great project and well worth your time."
+msgstr ""
+"3D-печать позволяет командам создавать кастомную защиту проводов и "
+"соединений от механических нагрузок. Это отличный проект, который "
+"определённо стоит вашего времени."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:24
+msgid "Disadvantages of 3D Printing"
+msgstr "Недостатки 3D-печати"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:26
+msgid ""
+"**If you are out of 3D printed spares at a competition, you're probably out "
+"of luck. Teams are advised to print at least one set of every single 3D "
+"printed part as spares for competition**."
+msgstr ""
+"** Если на соревнованиях у вас закончились запасные части, напечатанные на "
+"3D-принтере, скорее всего, вам не повезло. Командам рекомендуется "
+"распечатать как минимум по одному комплекту каждой детали, напечатанной на "
+"3D-принтере, в качестве запасных частей для соревнований **."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:27
+msgid ""
+"3D printed components are generally weaker than other materials such as "
+"aluminum. However, printing in the proper orientation can be very strong - "
+"teams have 3D printed hooks and other parts to support their FRC\\ |reg| "
+"robot (120 pounds) and FTC robots (40 pounds)."
+msgstr ""
+"3D-печатные компоненты обычно слабее других материалов, таких как алюминий. "
+"Однако печать в правильной ориентации может быть очень прочной - команды "
+"напечатали 3D-крюки и другие детали для поддержки робота FRC\\ |reg| (120 "
+"фунтов) и роботов FTC (40 фунтов)."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:28
+msgid ""
+"3D printed parts should only be loaded in one orientation. That is, if the "
+"robot is hanging from a hook, the only load should be on the bottom face of "
+"the curved part of the hook. Try to eliminate side loads as much as possible"
+" to avoid part failure."
+msgstr ""
+"Детали, напечатанные на 3D-принтере, должны быть нагружены только в одной "
+"ориентации. То есть, если робот подвешен на крюке, нагрузка должна "
+"приходиться только на нижнюю часть изогнутого крюка. Старайтесь по "
+"возможности исключить боковые нагрузки, чтобы избежать поломки детали."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:29
+msgid "The size of 3D printed parts is limited by the size of your print bed."
+msgstr ""
+"Размер деталей, напечатанных на 3D-принтере, ограничен размером вашего стола"
+" для печати."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:30
+msgid ""
+"Large and thick prints can take a long time (overnight) to print and can run"
+" the risk of failure."
+msgstr ""
+"Печать крупных и массивных деталей может занять много времени (например, всю"
+" ночь) и сопряжена с высоким риском неудачи."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:31
+msgid ""
+"3D printing can end up quite expensive, though filament can be found for a "
+"reasonable price on online vendors such as Amazon."
+msgstr ""
+"3D-печать может оказаться довольно дорогостоящей, хотя филамент можно найти "
+"по разумной цене у онлайн-продавцов, таких как Amazon."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:34
+msgid "Common Filaments"
+msgstr "Обычные Филаменты"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:36
+msgid ""
+"For almost every part that needs to be 3D printed for FTC, **PLA (or PLA+, "
+"Pro, etc) and/or PETG will meet all the needs for strength, durability, and "
+"aesthetics.** These two filament types are by far the easiest to print, and "
+"are sold by many manufacturers for reasonable prices. Most of the other "
+"filaments here offer very specific advantages (like TPU) that come at the "
+"cost of effort, time, and money."
+msgstr ""
+"Практически для любой детали, которую необходимо напечатать для FTC, **PLA "
+"(или PLA+, Pro и т.д.) и/или PETG удовлетворят все требования по прочности, "
+"долговечности и внешнего вида.** Эти два типа филамента являются безусловно "
+"самыми простыми в печати и продаются многими производителями по разумным "
+"ценам. Большинство других материалов предлагают весьма специфические "
+"преимущества (как, например, TPU), которые достигаются ценой дополнительных "
+"усилий, времени и денег."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:41
+msgid "PLA (Polylactic Acid)"
+msgstr "PLA (Полимолочная Кислота)"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:97
+msgid "Nylon"
+msgstr "Нейлон"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:103
+msgid ""
+"Nylon is infamous for absorbing moisture from the air and should be "
+"thoroughly dried before and during printing. Failure to do this will "
+"probably result in a nearly unusable part."
+msgstr ""
+"Нейлон печально известен тем, что впитывает влагу из воздуха, и его следует "
+"тщательно высушивать до и во время печати. Несоблюдение этого требования, "
+"вероятно, приведет к тому, что деталь будет практически непригодна для "
+"использования."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:107
+msgid "Carbon Fiber-filled"
+msgstr "Наполненный углеродным волокном"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:147
+msgid "Draft Angle"
+msgstr "Угол Наклона"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:152
+msgid "Stress Vectors"
+msgstr "Векторы Напряжения"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:156
+msgid ""
+"It might seem counterintuitive to split up a part into multiple parts to "
+"increase strength, but there is a logic behind it."
+msgstr ""
+"Может показаться нелогичным разбивать деталь на несколько частей для "
+"увеличения прочности, но в этом есть логика."
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst-1
+msgid "A multipart assembly 3D printing"
+msgstr "3D-печать сборки из нескольких частей"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst-1
+msgid "An assembled version of what was printing in the previous image"
+msgstr "Собранная версия того, что было напечатано на предыдущем изображении"
+
+#: ../../gm0/source/docs/custom-manufacturing/3d-printing.rst:168
+msgid ""
+"This assembly is a good example of considering part orientation, draft "
+"angles, and stress vectors in each part of the design. Complex parts can be "
+"made strong and without any support by simply splitting it up in the right "
+"way."
+msgstr ""
+"Эта сборка является хорошим примером учета ориентации деталей, углов наклона"
+" и векторов напряжений в каждой детали конструкции. Сложные детали можно "
+"сделать прочными и без какой-либо поддержки, просто правильно разделив их."
