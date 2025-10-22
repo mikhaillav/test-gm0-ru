@@ -3,16 +3,123 @@
 # This file is distributed under the same license as the Game Manual 0 package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Соня Либерман, 2025
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Game Manual 0 0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-12 17:46+0000\n"
+"POT-Creation-Date: 2025-10-22 16:33+0000\n"
 "PO-Revision-Date: 2022-08-16 05:18+0000\n"
+"Last-Translator: Соня Либерман, 2025\n"
 "Language-Team: Russian (Russia) (https://app.transifex.com/gamemanual0/teams/148648/ru_RU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../gm0/source/docs/design-skills/cad.rst:5
+#: ../../gm0/source/docs/design-skills/cad.rst:13
+msgid "Computer-aided design (CAD)"
+msgstr "Computer-aided design (CAD) - Автоматизированное проектирование"
+
+#: ../../gm0/source/docs/design-skills/cad.rst:8
+msgid "Introduction"
+msgstr "Вступление"
+
+#: ../../gm0/source/docs/design-skills/cad.rst:17
+msgid ""
+"**CAD is not necessary in FTC to build a successful robot.** Many successful"
+" teams didn't CAD their robot at all. Other successful teams only made parts"
+" of their robot in CAD. Still other teams fully designed their robot in CAD."
+msgstr ""
+"**Для создания успешного робота в FTC не требуется CAD.** Многие успешные "
+"команды вообще не создавали своих роботов в CAD. Другие успешные команды "
+"создавали только отдельные части своих роботов в CAD. Другие команды "
+"полностью проектировали своих роботов в CAD."
+
+#: ../../gm0/source/docs/design-skills/cad.rst:19
+msgid ""
+"So, what's the point of CAD, then? It is encouraged that new teams try their"
+" hand at CAD, especially if you have a mentor or parent who is experienced "
+"in such an area. CAD is beneficial for multiple reasons."
+msgstr ""
+"Итак, в чем же тогда смысл CAD? Приветствуется, чтобы новые команды "
+"пробовали свои силы в CAD, особенно если у вас есть наставник или родитель, "
+"имеющий опыт работы в этой области. CAD полезен по нескольким причинам."
+
+#: ../../gm0/source/docs/design-skills/cad.rst:22
+msgid ""
+"CAD is a professional tool that is used in many STEM fields. Having CAD "
+"knowledge and skills will be beneficial in your future career, should you "
+"study and work in those fields."
+msgstr ""
+"CAD - это профессиональный инструмент, который используется во многих "
+"областях STEM. Знания и навыки в области CAD будут полезны в вашей будущей "
+"карьере, если вы будете учиться и работать в этих областях."
+
+#: ../../gm0/source/docs/design-skills/cad.rst:26
+msgid ""
+"**However, CAD is not the magic genie that will guarantee you success in "
+"FTC.** When used properly, it is a great tool to aid teams in building their"
+" robot. Keep in mind, though, that many teams have had success without CAD."
+msgstr ""
+"**Однако CAD - это не волшебный инструмент, который гарантирует вам успех в "
+"FTC.** При правильном использовании это отличный инструмент, помогающий "
+"командам создавать своих роботов. Однако имейте в виду, что многие команды "
+"добились успеха и без CAD."
+
+#: ../../gm0/source/docs/design-skills/cad.rst:31
+msgid "Overview of CAD Programs"
+msgstr "Обзор CAD-программ"
+
+#: ../../gm0/source/docs/design-skills/cad.rst:36
+msgid "`Onshape <https://www.onshape.com/en/education/>`_"
+msgstr "`Onshape <https://www.onshape.com/en/education/>`_"
+
+#: ../../gm0/source/docs/design-skills/cad.rst:38
+msgid ""
+"A fully-featured CAD package, but it runs entirely in the cloud. It can run "
+"on any computer (even Chromebooks!) and has iOS, iPadOS, and Android apps as"
+" well."
+msgstr ""
+"Это полнофункциональный пакет CAD, но он полностью работает в облаке. Он "
+"может работать на любом компьютере (даже на ноутбуках Chromebook!), а также "
+"поддерживает приложения для iOS, iPadOS и Android."
+
+#: ../../gm0/source/docs/design-skills/cad.rst:42
+msgid ""
+"OnShape also has FeatureScript, a programming language where you can write "
+"custom features. The community has created a lot of very useful "
+"FeatureScripts already which you can use completely for free."
+msgstr ""
+"В OnShape также есть FeatureScript, язык программирования, на котором вы "
+"можете создавать пользовательские функции. Сообщество уже создало множество "
+"очень полезных FeatureScripts, которые вы можете использовать совершенно "
+"бесплатно."
+
+#: ../../gm0/source/docs/design-skills/cad.rst:49
+msgid ""
+"`SolidWorks "
+"<https://app.smartsheet.com/b/form/6762f6652a04487ca9786fcb06b84cb5>`_"
+msgstr ""
+"`SolidWorks "
+"<https://app.smartsheet.com/b/form/6762f6652a04487ca9786fcb06b84cb5>`_"
+
+#: ../../gm0/source/docs/design-skills/cad.rst:55
+msgid ""
+"If you have mentors or team members with previous experience in SolidWorks "
+"or an engineering class at your school that teaches SolidWorks, it will be "
+"your best choice."
+msgstr ""
+"Если у вас есть наставники или участники команды с предыдущим опытом работы "
+"в SolidWorks или в вашей школе есть инженерный класс, где преподается "
+"SolidWorks, это будет ваш лучший выбор."
+
+#: ../../gm0/source/docs/design-skills/cad.rst:58
+msgid "`Inventor <https://www.autodesk.com/education/edu-software/overview>`_"
+msgstr ""
+"`Inventor <https://www.autodesk.com/education/edu-software/overview>`_"
