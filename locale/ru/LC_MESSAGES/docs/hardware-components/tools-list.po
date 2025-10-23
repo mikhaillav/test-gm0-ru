@@ -4,6 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# Соня Либерман, 2025
 # Darya Tepysheva, 2025
 # 
 #, fuzzy
@@ -11,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Game Manual 0 0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-22 04:29+0000\n"
+"POT-Creation-Date: 2025-10-23 04:29+0000\n"
 "PO-Revision-Date: 2022-08-16 05:18+0000\n"
 "Last-Translator: Darya Tepysheva, 2025\n"
 "Language-Team: Russian (Russia) (https://app.transifex.com/gamemanual0/teams/148648/ru_RU/)\n"
@@ -20,3 +21,192 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:2
+msgid "Tools List"
+msgstr "Список Инструментов"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:4
+msgid ""
+"Here are a selection of necessary and useful tools for your team. You'll "
+"obviously need to purchase the basics such as the right screwdriver, hex "
+"keys, and drill bits. For a bit more precision and the ability to dabble in "
+"custom, opt for a drill press and bandsaw. A router might be useful for "
+"teams interested in working with wood, a great material for prototyping (and"
+" also for final iterations!)"
+msgstr ""
+"Вот подборка необходимых и полезных инструментов для вашей команды. "
+"Очевидно, что вам необходимо приобрести самые необходимые инструменты, такие"
+" как отвертки, шестигранные ключи и сверла. Для более точной работы и "
+"возможности создавать кастомные детали стоит обзавестись сверлильным станком"
+" и ленточной пилой. Фрезер может пригодиться командам, работающим с деревом "
+"— отличным материалом для прототипов (и даже для финальных версий!)."
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:7
+msgid "Necessary"
+msgstr "Необходимые"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:9
+msgid ""
+"**Safety glasses. Wear them when you're using power tools. Seriously.**"
+msgstr ""
+"**Защитные очки. Надевайте их, когда пользуетесь электроинструментами. "
+"Серьезно.**"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:10
+msgid "Philips screwdrivers, assorted sizes"
+msgstr "Отвертки Philips разных размеров"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:13
+msgid "Hex drivers and hex L-keys"
+msgstr "Шестигранные отвертки и Г-образные шестигранники"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:12
+msgid "7/64\" hex (Actobotics and TETRIX)"
+msgstr "7/64\" шестигранник (Actobotics и TETRIX)"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:13
+msgid "3/32\", ball head for set screws is discouraged (TETRIX)"
+msgstr ""
+"Не рекомендуется использовать сферические головки 3/32\" для установочных "
+"винтов (TETRIX)"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:14
+msgid "2.5/3mm hex (goBILDA)"
+msgstr "Шестигранник 2,5/3 мм (goBILDA)"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:16
+msgid "Nut drivers and wrenches"
+msgstr "Отвертки и гаечные ключи"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:16
+msgid "5.5 mm hex nut driver/wrench (REV)"
+msgstr "Отвертка/гаечный ключ с шестигранной головкой 5,5 мм (REV)"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:17
+msgid "7 mm hex nut driver/wrench (goBILDA)"
+msgstr "Гаечный ключ/отвертка с шестигранной головкой 7 мм (goBILDA)"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:18
+msgid "Drill and drill bits"
+msgstr "Дрель и свёрла"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:19
+msgid "Pliers, needle-nose and locking"
+msgstr "Плоскогубцы: узкогубцы и струбцины"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:20
+msgid "Metal file (sandpaper not recommended, you're not working with wood)"
+msgstr ""
+"Напильник по металлу (наждачная бумага не рекомендуется, вы же не с деревом "
+"работаете)"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:21
+msgid "Quick lock clamps (2+) or vise"
+msgstr "Быстрозажимные струбцины (2+) или тиски"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:22
+msgid "Hammer and mallet"
+msgstr "Молоток и киянка"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:23
+msgid "Centerpunch"
+msgstr "Кернер"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:24
+msgid "Hacksaw (cuts through steel shafts)"
+msgstr "Ножовка по металлу (для резки стальных осей)"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:25
+msgid "Wire stripper/wire cutter"
+msgstr "Стриппер/кусачки для проводов"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:26
+msgid "Zip ties/Velcro ties"
+msgstr "Стяжки/Липучки"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:27
+msgid "Electrical tape"
+msgstr "Изолента"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:28
+msgid "Stainless steel ruler and rafter square"
+msgstr "Линейка из нержавеющей стали и строительный угольник"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:29
+msgid "Sharp pencil or very fine permanent marker"
+msgstr "Острый карандаш или очень тонкий перманентный маркер"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:32
+msgid "Helpful"
+msgstr "Полезное"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:34
+msgid "Bandsaw"
+msgstr "Ленточная пила"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:36
+msgid "A bandsaw **cannot** cut through steel :term:`shafts <Shaft>`!"
+msgstr "Ленточная пила **не может** резать стальные :term:`оси <Shaft>`!"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:38
+msgid "Impact driver"
+msgstr "Ударный шуруповёрт"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:39
+msgid "Drill press"
+msgstr "Сверлильный станок"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:40
+msgid "Miter saw with non-ferrous metal cutting blade"
+msgstr "Торцовочная пила с диском для цветных металлов"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:41
+msgid "Dremel (use sparingly; Dremel =/= bandsaw)"
+msgstr ""
+"Дремель (использовать для тонкой работы; Дремель =/= это не ленточная пила)"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:42
+msgid "Grip tape"
+msgstr "Абразивная лента для сцепления"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:43
+msgid "Caliper"
+msgstr "Штангенциркуль"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:44
+msgid "Soldering iron"
+msgstr "Паяльник"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:45
+msgid "Heat gun"
+msgstr "Термофен"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:46
+msgid "Router or table saw"
+msgstr "Фрезер или настольная циркулярная пила"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:47
+msgid "Jigsaw"
+msgstr "Лобзик"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:48
+msgid "Metal brake"
+msgstr "Листогиб "
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:49
+msgid "3d printer"
+msgstr "3Д-принтер"
+
+#: ../../gm0/source/docs/hardware-components/tools-list.rst:51
+msgid ""
+"A 3d printer, CNC machine, or laser cutter greatly increases your ability to"
+" create custom robot designs. For most teams, buying a CNC or laser cutter "
+"is way beyond their budget, but you might be able to get access to one "
+"through school, local college, or nearby makerspace."
+msgstr ""
+"Наличие 3Д-принтера, станка с ЧПУ или лазерного станка значительно расширяет"
+" возможности создания кастомных деталей для робота. Для большинства команд "
+"покупка ЧПУ или лазерного станка недоступна по бюджету, но доступ к такому "
+"оборудованию можно получить через школу, местный колледж или ближайший "
+"фаблаб / мейкерспейс."
