@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Game Manual 0 0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-24 16:31+0000\n"
+"POT-Creation-Date: 2025-10-25 16:28+0000\n"
 "PO-Revision-Date: 2022-08-16 05:18+0000\n"
 "Last-Translator: Elizaveta Sukhotskaya, 2025\n"
 "Language-Team: Russian (Russia) (https://app.transifex.com/gamemanual0/teams/148648/ru_RU/)\n"
@@ -20,3 +20,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: ru_RU\n"
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: ../../gm0/source/docs/software/adv-control-system/sdk-motors.rst:4
+msgid "SDK Motors"
+msgstr "SDK Motors"
+
+#: ../../gm0/source/docs/software/adv-control-system/sdk-motors.rst:9
+msgid "General Explanation"
+msgstr "Общее Объяснение"
