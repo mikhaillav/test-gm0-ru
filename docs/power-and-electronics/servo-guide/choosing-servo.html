@@ -1,0 +1,637 @@
+<!doctype html>
+<html class="no-js" lang="ru" data-content_root="../../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../../../_static/assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link href="../../../_static/assets/favicon/favicon.svg" rel="icon" type="image/svg+xml">
+    <link rel="icon" type="image/x-icon" href="../../../_static/assets/favicon/favicon-dark.ico" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/x-icon" href="../../../_static/assets/favicon/favicon.ico" media="(prefers-color-scheme: light)">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../_static/assets/favicon/apple-touch-icon.png" type="image/png">
+    <link rel="manifest" href="../../../_static/assets/favicon/site.webmanifest"><meta property="og:title" content="Choosing a Servo" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="docs/power-and-electronics/servo-guide/choosing-servo.html" />
+<meta property="og:site_name" content="Game Manual 0" />
+<meta property="og:description" content="Choosing a servo can seem daunting at first, given the number of options to consider. This guide is intended to provide a starting point to compare different servo options, and also has some hand p..." />
+<meta property="og:image" content="https://raw.githubusercontent.com/gamemanual0/gm0/main/source/_static/assets/gm0-logo.png" />
+<meta property="og:image:alt" content="Game Manual 0" />
+<meta name="description" content="Choosing a servo can seem daunting at first, given the number of options to consider. This guide is intended to provide a starting point to compare different servo options, and also has some hand p..." />
+<meta property="og:ignore_canonical" content="true" />
+<meta name="theme-color" content="#F47F27" />
+<link rel="index" title="Алфавитный указатель" href="../../../genindex.html" /><link rel="search" title="Поиск" href="../../../search.html" /><link rel="next" title="Servo Usage Tips" href="usage-tips.html" /><link rel="prev" title="Servo Guide" href="index.html" />
+
+    <!-- Generated with Sphinx 8.0.2 and Furo 2024.08.06 -->
+        <title>Choosing a Servo - Game Manual 0</title>
+      <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/custom.css?v=34d6ed87" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --admonition-font-size: 1rem;
+  --admonition-title-font-size: 1rem;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-primary: #1f2022;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-primary: #1f2022;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../../index.html"><div class="brand">Game Manual 0</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../../_static/assets/gm0-logo.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../../_static/assets/gm0-logo_white.svg" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Поиск" name="q" aria-label="Поиск">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Содержание Game Manual 0</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../mission-statement.html">Цель Game Manual 0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../start-here.html">С чего Начать?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../know-your-lingo.html">Знайте Ваш Язык!</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../being-a-team/index.html">Работа в команде</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Работа в команде</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../being-a-team/starting-a-team.html">Создание Команды</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../being-a-team/team-organization.html">Организация команды</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../being-a-team/collaboration-and-efficiency.html">Сотрудничество и Эффективность</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../being-a-team/outreach-basics.html">Основы Работы с Сообществом</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../being-a-team/pitching-your-team.html">Представь Свою Команду!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../being-a-team/how-to-ask-effective-questions.html">Как Задавать Эффективные Вопросы</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../design-skills/index.html">Навыки конструирования</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Навыки конструирования</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../design-skills/engineering-design-process.html">Процесс Инженерной Разработки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../design-skills/design-strategy.html">Стратегия Проектирования</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../design-skills/cad.html">Computer-aided design (CAD) - Автоматизированное проектирование</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../design-skills/cad-tutorials.html">CAD Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../design-skills/design-glossary.html">Design Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../hardware-components/index.html">Hardware Components</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Hardware Components</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../hardware-components/kit-and-hardware-guide/index.html">Kit and Hardware Guide</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Kit and Hardware Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../hardware-components/kit-and-hardware-guide/gobilda.html">goBILDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hardware-components/kit-and-hardware-guide/rev-robotics.html">REV Robotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hardware-components/kit-and-hardware-guide/tetrix.html">TETRIX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hardware-components/kit-and-hardware-guide/actobotics.html">Actobotics (Discontinued)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hardware-components/kit-and-hardware-guide/custom.html">Custom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../hardware-components/kit-and-hardware-guide/kit-glossary.html">Kit Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../hardware-components/fastener-guide.html">Fastener Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hardware-components/tools-list.html">Список Инструментов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hardware-components/tips-and-tricks.html">Советы и Рекомендации</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../custom-manufacturing/index.html">Custom Manufacturing</a><input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Custom Manufacturing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../custom-manufacturing/materials-guide.html">Materials Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom-manufacturing/3d-printing.html">3D-печать</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom-manufacturing/machining.html">Machining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom-manufacturing/laser-cutting.html">Laser Cutting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../custom-manufacturing/manufacturing-glossary.html">Manufacturing Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../common-mechanisms/index.html">Common Mechanisms</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Common Mechanisms</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../common-mechanisms/design-tradeoffs.html">Design Tradeoffs</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../common-mechanisms/drivetrains/index.html">Drivetrains</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Drivetrains</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/drivetrains/tank.html">Tank (Skid-Steer) Drivetrains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/drivetrains/holonomic.html">Holonomic Drivetrains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/drivetrains/drivetrain-gallery.html">Sample Drivetrains</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../common-mechanisms/power-transmission/index.html">Power Transmission</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Power Transmission</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/power-transmission/motion-mounting.html">Motion Mounting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/power-transmission/shaft-retention.html">Shaft Retention</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/power-transmission/direct-drive.html">Direct Drive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html">Gears</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/power-transmission/chain.html">Roller Chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/power-transmission/belt.html">Timing Belt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/power-transmission/power-transmission-glossary.html">Power Transmission Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../common-mechanisms/linear-motion-guide/index.html">Linear Motion Guide</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Linear Motion Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/linear-motion-guide/drawer-slides.html">Drawer Slides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/linear-motion-guide/extrusion-slides.html">Extrusion Slides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/linear-motion-guide/linear-bearing-slides.html">Linear Bearing Slides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/linear-motion-guide/custom.html">Custom Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/linear-motion-guide/lead-screws.html">Lead Screws</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/linear-motion-guide/rack-and-pinion.html">Rack and Pinion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/linear-motion-guide/rigging.html">Rigging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../common-mechanisms/arms.html">Arms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../common-mechanisms/linkages.html">Linkages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../common-mechanisms/passive-intake-claw.html">Passive Intake/Claw</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../common-mechanisms/active-intake/index.html">Active Intake</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Active Intake</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/active-intake/principles-of-an-intake.html">Principles of an Intake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/active-intake/types-of-intakes.html">Types of Intake</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../common-mechanisms/transfers/index.html">Transfers</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Transfers</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/transfers/transfer-design.html">Transfer Design Fundamentals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/transfers/transfer-types.html">Types of Transfers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../common-mechanisms/dead-wheels.html">Dead Wheels</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../common-mechanisms/turrets/index.html">Turrets</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Turrets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/turrets/full-turret.html">Full Turrets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../common-mechanisms/turrets/mini-turret.html">Mini Turrets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../index.html">Electronics and Motion Components</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Electronics and Motion Components</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../wiring.html">Wiring Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../connectors-and-wires.html">Connectors and Wires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../control-system.html">Control Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../driver-station-guide.html">Driver Station Guide</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../motor-guide/index.html">Motor Guide</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Motor Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../motor-guide/choosing-motor.html">Choosing a Motor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motor-guide/gearbox-anatomy.html">Gearbox Internals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motor-guide/wiring-mounting-motors.html">Motor Wiring And Mounting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motor-guide/motor-power.html">Motor Power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../motor-guide/motor-glossary.html">Motor Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current has-children"><a class="reference internal" href="index.html">Servo Guide</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Servo Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l3 current current-page"><a class="current reference internal" href="#">Choosing a Servo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="usage-tips.html">Servo Usage Tips</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../sensor-glossary.html">Sensor Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tips-and-tricks.html">Советы и Рекомендации</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../software/index.html">Программирование</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Программирование</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../software/getting-started/index.html">Введение</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Введение</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software/getting-started/fundamental-concepts.html">Fundamental Concepts of Programming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/getting-started/options-for-programming.html">Options for Programming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/getting-started/linear-opmode-vs-opmode.html">LinearOpMode vs OpMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/getting-started/common-hardware-components.html">Reading and Writing to Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/getting-started/using-android-studio.html">Using Android Studio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/getting-started/common-issues.html">Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../software/tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Tutorials</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software/tutorials/mecanum-drive.html">Mecanum TeleOp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/tutorials/gamepad.html">Gamepad Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/tutorials/using-telemetry.html">Using Telemetry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/tutorials/encoders.html">Encoders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/tutorials/bulk-reads.html">Bulk Reads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/tutorials/vision.html">Computer Vision</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../software/concepts/index.html">Programming Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of Programming Concepts</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software/concepts/control-loops.html">Control Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/concepts/finite-state-machines.html">Finite State Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/concepts/kinematics.html">Kinematics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/concepts/odometry.html">Odometry</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../software/adv-control-system/index.html">Advanced Control System</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of Advanced Control System</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../software/adv-control-system/control-system-internals.html">Control System Electronics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/adv-control-system/sdk-communication.html">SDK Communication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/adv-control-system/sdk-motors.html">SDK Motors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/adv-control-system/sdk-servos.html">SDK Servos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/adv-control-system/sdk-sensors.html">SDK Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../software/adv-control-system/lynx-module.html">Lynx Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../software/software-glossary.html">Словарь Программной Части</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../awards/index.html">Awards</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle navigation of Awards</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../awards/award-types.html">Types of Awards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../awards/portfolio.html">Инженерное Портфолио</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../awards/judging-presentation.html">The Judging Process and Presentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../awards/notebook.html">Notebook Designs and Decisions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../useful-resources.html">Useful Resources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../appendix/index.html">Appendix</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle navigation of Appendix</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/gallery.html">Gallery Of Robot Designs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/vendor-list.html">Vendor List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/vendor-guide.html">Vendor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../appendix/license.html">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../contributing/index.html">Contributor’s Guide</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Contributor’s Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/style-guide.html">Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/methods-of-contributing.html">Methods of Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/contributors.html">Contributors</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../../../_sources/docs/power-and-electronics/servo-guide/choosing-servo.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="choosing-a-servo">
+<h1>Choosing a Servo<a class="headerlink" href="#choosing-a-servo" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Choosing a <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> can seem daunting at first, given the number of options to consider. This guide is intended to provide a starting point to compare different servo options, and also has some hand picked recommendations at the end.</p>
+<div class="admonition important">
+<p class="admonition-title">Важно</p>
+<p>It is very important to keep the reliability of a given vendor in mind when choosing servos. It is very common for manufacturers and resellers on Amazon and other similar sites to significantly exaggerate their servos“ specs, or pick unrealistic best-case scenarios for measuring the specs. We have limited our recommendations only to vendors who historically have been reliable with publishing accurate servo specifications.</p>
+<p>As a rule of thumb established manufacturers (Hitec, Savox, ServoCity, goBILDA, AndyMark, etc) will usually publish accurate numbers, and servos from marketplaces (Amazon, AliExpress, hobby stores, etc) should be viewed with significant skepticism.</p>
+</div>
+<section id="servo-type-regular-or-continuous">
+<h2>Servo Type: Regular or Continuous<a class="headerlink" href="#servo-type-regular-or-continuous" title="Ссылка на этот заголовок">¶</a></h2>
+<p><a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">Servos</span></a> that can rotate to a given position based on PWM input signal are called <strong>regular servos</strong>. In addition, there are also <strong>continuous rotation servos</strong>, which are effectively just small motors in a <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> form factor. They have no position control; instead, PWM signal is used to control their rotation speed.</p>
+<div class="admonition tip">
+<p class="admonition-title">Совет</p>
+<p>Continuous rotation servos aren’t even always in a traditional servo form factor.  The <a class="reference external" href="https://www.melonbotics.com/products/super-servo-plus">Melonbotics Super Servo Plus</a>, while considered a continuous rotation servos from a rules and control system perspective, is essentially a small motor + spur gearbox.  The 1000rpm rated output speed makes it an excellent alternative to large, heavy standard motors for small, high-speed mechanisms such as <a class="reference internal" href="../../common-mechanisms/active-intake/index.html"><span class="doc">active intakes</span></a>.</p>
+</div>
+<p>Many servos from FTC® vendors are Dual Mode, meaning they can switch between continuous and regular modes (often requiring the use of a sold-separately servo programmer). These servos can be used as either continuous or regular servos.</p>
+</section>
+<section id="servo-torque-and-speed">
+<h2>Servo Torque And Speed<a class="headerlink" href="#servo-torque-and-speed" title="Ссылка на этот заголовок">¶</a></h2>
+<p><a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">Servo</span></a> output power is measured in both <strong>speed</strong> and <strong>torque</strong>. Speed (normally in seconds per 60°) refers to how fast the <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> turns 60 degrees in Standard Rotation mode.</p>
+<div class="admonition-why-seconds-per-60-degrees admonition">
+<p class="admonition-title">Why seconds per 60 degrees?</p>
+<p>Historically, the servos commonly used in FTC were created for RC (Radio Controlled) car setups. These cars often had steering linkages with a maximum side to side travel of 60 degrees so manufacturers would often advertise their servos using seconds for 60 degrees.</p>
+</div>
+<p>Torque (usually measured in oz-in or in kg-cm) refers to the amount of force the <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> can apply to a lever. For reference, if you put a 1» bar on a servo, then put a force gauge on the end, the torque rating of the servo (in oz-in) will be measured.</p>
+<p>As you may know, speed and torque will generally have an inverse relationship. You can find some insanely powerful servos that are pretty slow (slower than 0.20 s/60°) or some less powerful ones with faster ratios (anything faster than 0.12 s/60° is considered fast).</p>
+<p>Finding the right <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> for your application can be tough, but a good way is trying to decide if you need more speed or torque, and if your <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> will experience shock loads or not.</p>
+</section>
+<section id="durability-and-servo-gear-material">
+<h2>Durability and Servo Gear Material<a class="headerlink" href="#durability-and-servo-gear-material" title="Ссылка на этот заголовок">¶</a></h2>
+<p>The two things that threaten a <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo’s</span></a> longevity are the internal motor burning out and more commonly, the <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gears</span></a> stripping inside the <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a>. A motor burning out is pretty uncommon, but it can happen under large loads for a prolonged amount of time.</p>
+<div class="admonition caution">
+<p class="admonition-title">Осторожно</p>
+<p>You should <strong>never</strong> stall a servo against an immovable object.</p>
+</div>
+<p>Gear stripping is a problem which can occur when the torque needed to actuate a component exceeds that of the <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo’s</span></a> maximum torque. There are two main cases when this can occur.</p>
+<ul class="simple">
+<li><p>Shock load from external force can strip the <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gears</span></a>. An example could be the component slamming into the field wall or another robot.</p></li>
+<li><p>Shock load from reversing directions on an object that is too heavy can strip the <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gears</span></a>. Torque increases with mass and also distance from the center of rotation. If the component being actuated is far from the <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a>, the long lever arm means larger torque. Furthermore, if the component is moving, reversing direction also will require more torque. Thus, the principle is that components should be light and not reverse direction suddenly to prolong <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> life.</p></li>
+</ul>
+<p>Shock load resistance is impacted directly by the material the <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gears</span></a> are made from. This ranges from plastic to titanium, so let’s go down the list, starting from the weakest.</p>
+<ul class="simple">
+<li><p><strong>Plastic</strong> (usually Nylon): With low power <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servos</span></a>, these can be okay if you ensure they are not subjected to shock loads. Generally used for applications in model airplanes such as ailerons. FTC applications include light load mechanisms which will not have direct contact with any game elements or the field. An example could be a servo that opens a trapdoor or moves game elements within the robot.</p>
+<ul>
+<li><p><strong>Karbonite</strong>: Hitec’s <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gear</span></a> plastic is more durable than Nylon and wears less over time, but it can still strip easily under the shock loads found in FTC.</p></li>
+</ul>
+</li>
+<li><p><strong>Brass</strong>: Brass <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gears</span></a> are stronger than plastic, but also suffer greatly when faced with shock loads in FTC such as intake wrists and deposit buckets. Brass <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gears</span></a> are found on slightly higher end servos such as the original REV Smart Robot Servo.</p></li>
+<li><p><strong>Steel</strong>: This is where we start getting big. Steel <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gears</span></a> are very durable and you’ll have a tough time stripping these. The goBILDA Proton servos, goBILDA Dual Mode servos, REV V2 Smart Robot Servos, and Axon servos are all examples of steel <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gear</span></a> <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a>.</p></li>
+<li><p><strong>Titanium</strong>: Titanium is where you get into really high end <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servos</span></a>. Starting from $75, they can reach over $150. A common misconception is that titanium is stronger than steel, however its advantage is in strength to weight ratio (as in, titanium gearboxes will often be lighter than steel gearboxes).</p></li>
+</ul>
+<p><a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">Servos</span></a> with weaker materials (e.g. plastic and brass) used for their <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gears</span></a> will often strip quite easily.  Servos with steel <a class="reference internal" href="../../common-mechanisms/power-transmission/gears.html#term-Gear"><span class="xref std std-term">gears</span></a> are significantly harder to strip; some teams have even reported stripping the aluminum hubs attached to their servos while the servos themselves survived with no damage.</p>
+</section>
+<section id="servo-size">
+<h2>Servo Size<a class="headerlink" href="#servo-size" title="Ссылка на этот заголовок">¶</a></h2>
+<p><a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">Servos</span></a> come in different sizes. Fortunately, almost all manufacturers use the same standard set of <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> sizes, ranging from sub-micro to large. The size most commonly used in FTC is the <em>standard size</em> (which includes REV Smart Robot Servos and goBILDA Dual Mode Servos) <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servos</span></a>. <em>Micro size</em> (which includes the Axon Micro) <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servos</span></a> can be useful when a particularly small mechanism is needed, though they usually are significantly less durable than <em>standard size</em> <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servos</span></a>. <em>Large size</em> (also known as quarter-scale) <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servos</span></a> are quite uncommon in FTC.</p>
+<p>Note that while it is easy to assume the larger the size, the more powerful the <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a>, it is often not the case. You can buy very powerful standard size <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servos</span></a> - just expect to pay more for them.</p>
+</section>
+<section id="servo-spline">
+<h2>Servo Spline<a class="headerlink" href="#servo-spline" title="Ссылка на этот заголовок">¶</a></h2>
+<p>The output shaft of the <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> is commonly called the <strong>spline</strong>. Most servos have industry standard 25 tooth spline (also known as F3); in particular, this is the spline used by REV Smart Servo and goBILDA Dual Mode servos. Hitec servos using 24 tooth spline were historically also very popular, but are much less common today.</p>
+<p>AndyMark servos are an exception to this, as they use a 5mm hex shaft as their output instead of a 24 or 25 tooth servo spline.</p>
+<div class="admonition attention">
+<p class="admonition-title">Внимание</p>
+<p>Please check the spline type before you buy the <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> - otherwise, your <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> attachments will not fit.</p>
+</div>
+<p>For more info about servo splines, please check <a class="reference external" href="https://www.servocity.com/servo-spline-info/">https://www.servocity.com/servo-spline-info/</a>.</p>
+</section>
+<section id="servo-range">
+<h2>Servo Range<a class="headerlink" href="#servo-range" title="Ссылка на этот заголовок">¶</a></h2>
+<p>The angle over which a non-continuous <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servo</span></a> can rotate while retaining position feedback is called the range. When choosing a servo, it is important to make sure you have enough range for the movement you need.</p>
+<p>By default, the FTC control system outputs 600-2400 microsecond signals. However, this range can be expanded to 500-2500 microseconds. When choosing a servo, it is important to make sure that its range will be usable for your application inside of 500-2500 microseconds.</p>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>The default 600-2400 range of the FTC control system when selecting the «Servo» configuration limits the range of many servos to less than the advertised range. Make sure you select the «Full Range Servo» configuration instead to get the full 500-2500 range.</p>
+</div>
+</section>
+<section id="cost">
+<h2>Cost<a class="headerlink" href="#cost" title="Ссылка на этот заголовок">¶</a></h2>
+<p><a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">Servos</span></a> range from cheap $7 <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servos</span></a> for light applications, all the way up to some Hitec or Savox <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servos</span></a> for close to $200.</p>
+<p>By far the best bang for your buck <a class="reference internal" href="index.html#term-Servo"><span class="xref std std-term">servos</span></a> out there are going to be the <strong>goBILDA Dual Mode Servos</strong> and <strong>REV V2 Smart Robot Servos</strong>. In addition, the <strong>goBILDA Proton</strong> servos are an excellent value for low-load mechanisms when you do not need more than 180 degrees of rotation or continuous rotation.</p>
+<p>Axon Robotics offers brushless, highly-programmable, steel-geared servos in the $90 price range.  These servos are designed specifically for FTC, and are extremely popular among teams wishing to maximize their robot’s capabilities and performance.</p>
+</section>
+<section id="recommended-servos">
+<h2>Recommended Servos<a class="headerlink" href="#recommended-servos" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Примечание</p>
+<p>We do not recommend very low-priced servos. Due to their low strength, they end up requiring multiple replacements over time, negating any cost benefits.</p>
+</div>
+<ul>
+<li><p><a class="reference external" href="https://www.gobilda.com/standard-size-servos">goBILDA Servos</a>: goBILDA offers a wide variety of servos suited excellently for FTC.</p>
+<ul class="simple">
+<li><p><strong>goBILDA Dual Mode Servos</strong> are very good price to performance/capability servos. They are dual mode, meaning you can program them to either standard or continuous rotation using a <a class="reference external" href="https://www.gobilda.com/servo-programmer-for-2000-series-dual-mode-servo/">goBILDA servo programmer</a> or <a class="reference external" href="https://www.revrobotics.com/rev-31-1108/">REV servo programmer</a>. In standard mode, they are rated for up to 300 degrees of range. They come in three gear ratio options: Torque, Speed, and Super Speed. They are rated for a reasonably high total mechanical output power (around 2.7W for the Torque and Speed, and around 3.2W for the Super Speed), and have steel gearboxes.</p></li>
+<li><p><strong>goBILDA 5 Turn Servos</strong> are 5 turn variants of their standard Dual Mode servos, which can rotate 5 turns while still tracking position. These servos have high range, making them ideal for use with external gearboxes, but are more expensive and have a lower precision than the normal variants.</p></li>
+<li><p><strong>goBILDA Proton Servos</strong> are goBILDA’s budget servos, coming it at approximately half the price of the standard Dual Mode servos. They come in two gear ratio options, Torque and Speed. Unlike the Dual Mode servos, these are not programmable, and therefore can not be used as continuous rotation servos. While their total mechanical power output of approximately 0.7W is a fair bit less than the Dual Mode servos, and they only have a 180 degree rotation range, their low price makes them a decent option for low-load mechanisms, and their steel gearboxes greatly reduce the chances of breaking the servos from accidental shock loads compared to other brands“ budget servos.</p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="https://www.revrobotics.com/Smart-servo-v2">REV Robotics V2 Smart Robot Servos</a>: These are similar to the goBILDA Dual Mode servos in price, performance, and capability. They are also dual mode, meaning you can program them to either standard or continuous rotation using a <a class="reference external" href="https://www.gobilda.com/servo-programmer-for-2000-series-dual-mode-servo/">goBILDA servo programmer</a> or <a class="reference external" href="https://www.revrobotics.com/rev-31-1108/">REV servo programmer</a>. In standard mode, they are rated for up to 270 degrees of range. They come in two gear ratio options, Balanced and UltraSpeed. The UltraSpeed is rated for a relatively high total mechanical output power of approximately 3.5W, and the Balanced is rated for a somewhat lower output of approximately 2.5W. They have steel gearboxes.</p></li>
+<li><p><a class="reference external" href="https://www.melonbotics.com/products/super-servo-plus">Melonbotics Super Servo Plus</a>: This servo is different from the other servos listed here. While considered a continuous rotation servos from a rules and control system perspective, it is essentially a small motor + spur gearbox.  The 1000rpm rated output speed makes it an excellent alternative to large, heavy standard motors for small, high-speed mechanisms such as <a class="reference internal" href="../../common-mechanisms/active-intake/index.html"><span class="doc">active intakes</span></a>.</p></li>
+<li><p><a class="reference external" href="https://axon-robotics.com/products/max">Axon MAX MK2</a>: This is widely considered to be the best high performance servo for FTC. It has uses heat-treated stainless steel gears for top-notch reliability, and has a very high rated total mechanical power output of 7.5W (only 0.5W below the 8W limit defined in the Competition Manual). The servo features an analog output wire, allowing you to read the absolute position of the servo. The Axon MK2 servos are also highly programmable with the <a class="reference external" href="https://axon-robotics.com/products/programmer">Programmer MK2</a>, featuring a wide range of adjustable parameters and modes (including standard and continuous rotation modes).</p>
+<div class="admonition tip">
+<p class="admonition-title">Совет</p>
+<p>Being able to read the absolute position of the servo can have significant benefits when programming your robot. For example, you can tell the servo to go to a position, wait for it to reach that position, then do the next action; as opposed to telling the servo to go to a position, waiting a set amount of time (which may be longer or shorter than the time actually needed), then doing the next action.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Важно</p>
+<p>The <a class="reference external" href="https://axon-robotics.com/products/mini">Axon MINI MK2</a> is very similar to the MAX in terms of total output power (though geared at a slightly faster speed/lower torque), and has the same features (including the heat treated stainless steel gears, programmability, and analog output wire). However, this servo is a slightly different form factor to the standard form factor used by the other servos on this list.  While the height is shorter than the MAX, it is slightly wider, and the servo horn is in a different position compared to the standard servo size. Due to this, we don’t recommend the MINI for anything other than fully custom-designed mechanisms not relying on standard mounts and horn position.</p>
+</div>
+</li>
+</ul>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="usage-tips.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Servo Usage Tips</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Servo Guide</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Game Manual 0 Contributors |  Hosting Graciously Provided By //Copperforge
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Choosing a Servo</a><ul>
+<li><a class="reference internal" href="#servo-type-regular-or-continuous">Servo Type: Regular or Continuous</a></li>
+<li><a class="reference internal" href="#servo-torque-and-speed">Servo Torque And Speed</a></li>
+<li><a class="reference internal" href="#durability-and-servo-gear-material">Durability and Servo Gear Material</a></li>
+<li><a class="reference internal" href="#servo-size">Servo Size</a></li>
+<li><a class="reference internal" href="#servo-spline">Servo Spline</a></li>
+<li><a class="reference internal" href="#servo-range">Servo Range</a></li>
+<li><a class="reference internal" href="#cost">Cost</a></li>
+<li><a class="reference internal" href="#recommended-servos">Recommended Servos</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../../_static/documentation_options.js?v=e3d86535"></script>
+    <script src="../../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../../_static/translations.js?v=9bfe3ffa"></script>
+    <script src="../../../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>
