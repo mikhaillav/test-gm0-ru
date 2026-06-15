@@ -1,0 +1,699 @@
+<!doctype html>
+<html class="no-js" lang="ru" data-content_root="../../">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="../../_static/assets/favicon/favicon-96x96.png" sizes="96x96">
+    <link href="../../_static/assets/favicon/favicon.svg" rel="icon" type="image/svg+xml">
+    <link rel="icon" type="image/x-icon" href="../../_static/assets/favicon/favicon-dark.ico" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/x-icon" href="../../_static/assets/favicon/favicon.ico" media="(prefers-color-scheme: light)">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../_static/assets/favicon/apple-touch-icon.png" type="image/png">
+    <link rel="manifest" href="../../_static/assets/favicon/site.webmanifest"><meta property="og:title" content="3D-печать" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="docs/custom-manufacturing/3d-printing.html" />
+<meta property="og:site_name" content="Game Manual 0" />
+<meta property="og:description" content="Виды 3D печати: Существует несколько различных видов 3D-печати. FDM (Моделирование Наплавленного Осаждения), также известная как FFF (Изготовление Плавленой Нити Накала) предполагает выдавливание р..." />
+<meta property="og:image" content="https://raw.githubusercontent.com/gamemanual0/gm0/main/source/_static/assets/gm0-logo.png" />
+<meta property="og:image:alt" content="Game Manual 0" />
+<meta name="description" content="Виды 3D печати: Существует несколько различных видов 3D-печати. FDM (Моделирование Наплавленного Осаждения), также известная как FFF (Изготовление Плавленой Нити Накала) предполагает выдавливание р..." />
+<meta property="og:ignore_canonical" content="true" />
+<meta name="theme-color" content="#F47F27" />
+<link rel="index" title="Алфавитный указатель" href="../../genindex.html" /><link rel="search" title="Поиск" href="../../search.html" /><link rel="next" title="Machining" href="machining.html" /><link rel="prev" title="Materials Guide" href="materials-guide.html" />
+
+    <!-- Generated with Sphinx 8.0.2 and Furo 2024.08.06 -->
+        <title>3D-печать - Game Manual 0</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=354aac6f" />
+    <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=fd3f3429" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=34d6ed87" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --font-stack: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  --admonition-font-size: 1rem;
+  --admonition-title-font-size: 1rem;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-primary: #1f2022;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  --color-background-primary: #1f2022;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../../index.html"><div class="brand">Game Manual 0</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../../index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo only-light" src="../../_static/assets/gm0-logo.svg" alt="Light Logo"/>
+    <img class="sidebar-logo only-dark" src="../../_static/assets/gm0-logo_white.svg" alt="Dark Logo"/>
+  </div>
+  
+  
+</a><form class="sidebar-search-container" method="get" action="../../search.html" role="search">
+  <input class="sidebar-search" placeholder="Поиск" name="q" aria-label="Поиск">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Содержание Game Manual 0</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../mission-statement.html">Цель Game Manual 0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../start-here.html">С чего Начать?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../know-your-lingo.html">Знайте Ваш Язык!</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../being-a-team/index.html">Работа в команде</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle navigation of Работа в команде</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../being-a-team/starting-a-team.html">Создание Команды</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../being-a-team/team-organization.html">Организация команды</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../being-a-team/collaboration-and-efficiency.html">Сотрудничество и Эффективность</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../being-a-team/outreach-basics.html">Основы Работы с Сообществом</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../being-a-team/pitching-your-team.html">Представь Свою Команду!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../being-a-team/how-to-ask-effective-questions.html">Как Задавать Эффективные Вопросы</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../design-skills/index.html">Навыки конструирования</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" role="switch" type="checkbox"/><label for="toctree-checkbox-2"><div class="visually-hidden">Toggle navigation of Навыки конструирования</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../design-skills/engineering-design-process.html">Процесс Инженерной Разработки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design-skills/design-strategy.html">Стратегия Проектирования</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design-skills/cad.html">Computer-aided design (CAD) - Автоматизированное проектирование</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design-skills/cad-tutorials.html">CAD Tutorials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../design-skills/design-glossary.html">Design Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../hardware-components/index.html">Hardware Components</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" role="switch" type="checkbox"/><label for="toctree-checkbox-3"><div class="visually-hidden">Toggle navigation of Hardware Components</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../hardware-components/kit-and-hardware-guide/index.html">Kit and Hardware Guide</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" role="switch" type="checkbox"/><label for="toctree-checkbox-4"><div class="visually-hidden">Toggle navigation of Kit and Hardware Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../hardware-components/kit-and-hardware-guide/gobilda.html">goBILDA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware-components/kit-and-hardware-guide/rev-robotics.html">REV Robotics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware-components/kit-and-hardware-guide/tetrix.html">TETRIX</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware-components/kit-and-hardware-guide/actobotics.html">Actobotics (Discontinued)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware-components/kit-and-hardware-guide/custom.html">Custom</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../hardware-components/kit-and-hardware-guide/kit-glossary.html">Kit Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware-components/fastener-guide.html">Fastener Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware-components/tools-list.html">Список Инструментов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../hardware-components/tips-and-tricks.html">Советы и Рекомендации</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="index.html">Custom Manufacturing</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" role="switch" type="checkbox"/><label for="toctree-checkbox-5"><div class="visually-hidden">Toggle navigation of Custom Manufacturing</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="materials-guide.html">Materials Guide</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">3D-печать</a></li>
+<li class="toctree-l2"><a class="reference internal" href="machining.html">Machining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="laser-cutting.html">Laser Cutting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="manufacturing-glossary.html">Manufacturing Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../common-mechanisms/index.html">Common Mechanisms</a><input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" role="switch" type="checkbox"/><label for="toctree-checkbox-6"><div class="visually-hidden">Toggle navigation of Common Mechanisms</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../common-mechanisms/design-tradeoffs.html">Design Tradeoffs</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../common-mechanisms/drivetrains/index.html">Drivetrains</a><input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" role="switch" type="checkbox"/><label for="toctree-checkbox-7"><div class="visually-hidden">Toggle navigation of Drivetrains</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/drivetrains/tank.html">Tank (Skid-Steer) Drivetrains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/drivetrains/holonomic.html">Holonomic Drivetrains</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/drivetrains/drivetrain-gallery.html">Sample Drivetrains</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../common-mechanisms/power-transmission/index.html">Power Transmission</a><input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" role="switch" type="checkbox"/><label for="toctree-checkbox-8"><div class="visually-hidden">Toggle navigation of Power Transmission</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/power-transmission/motion-mounting.html">Motion Mounting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/power-transmission/shaft-retention.html">Shaft Retention</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/power-transmission/direct-drive.html">Direct Drive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/power-transmission/gears.html">Gears</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/power-transmission/chain.html">Roller Chain</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/power-transmission/belt.html">Timing Belt</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/power-transmission/power-transmission-glossary.html">Power Transmission Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../common-mechanisms/linear-motion-guide/index.html">Linear Motion Guide</a><input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" role="switch" type="checkbox"/><label for="toctree-checkbox-9"><div class="visually-hidden">Toggle navigation of Linear Motion Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/linear-motion-guide/drawer-slides.html">Drawer Slides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/linear-motion-guide/extrusion-slides.html">Extrusion Slides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/linear-motion-guide/linear-bearing-slides.html">Linear Bearing Slides</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/linear-motion-guide/custom.html">Custom Options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/linear-motion-guide/lead-screws.html">Lead Screws</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/linear-motion-guide/rack-and-pinion.html">Rack and Pinion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/linear-motion-guide/rigging.html">Rigging</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../common-mechanisms/arms.html">Arms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common-mechanisms/linkages.html">Linkages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../common-mechanisms/passive-intake-claw.html">Passive Intake/Claw</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../common-mechanisms/active-intake/index.html">Active Intake</a><input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" role="switch" type="checkbox"/><label for="toctree-checkbox-10"><div class="visually-hidden">Toggle navigation of Active Intake</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/active-intake/principles-of-an-intake.html">Principles of an Intake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/active-intake/types-of-intakes.html">Types of Intake</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../common-mechanisms/transfers/index.html">Transfers</a><input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" role="switch" type="checkbox"/><label for="toctree-checkbox-11"><div class="visually-hidden">Toggle navigation of Transfers</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/transfers/transfer-design.html">Transfer Design Fundamentals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/transfers/transfer-types.html">Types of Transfers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../common-mechanisms/dead-wheels.html">Dead Wheels</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../common-mechanisms/turrets/index.html">Turrets</a><input class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" role="switch" type="checkbox"/><label for="toctree-checkbox-12"><div class="visually-hidden">Toggle navigation of Turrets</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/turrets/full-turret.html">Full Turrets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common-mechanisms/turrets/mini-turret.html">Mini Turrets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../power-and-electronics/index.html">Electronics and Motion Components</a><input class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" role="switch" type="checkbox"/><label for="toctree-checkbox-13"><div class="visually-hidden">Toggle navigation of Electronics and Motion Components</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../power-and-electronics/wiring.html">Wiring Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power-and-electronics/connectors-and-wires.html">Connectors and Wires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power-and-electronics/control-system.html">Control Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power-and-electronics/driver-station-guide.html">Driver Station Guide</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../power-and-electronics/motor-guide/index.html">Motor Guide</a><input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" role="switch" type="checkbox"/><label for="toctree-checkbox-14"><div class="visually-hidden">Toggle navigation of Motor Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../power-and-electronics/motor-guide/choosing-motor.html">Choosing a Motor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../power-and-electronics/motor-guide/gearbox-anatomy.html">Gearbox Internals</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../power-and-electronics/motor-guide/wiring-mounting-motors.html">Motor Wiring And Mounting</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../power-and-electronics/motor-guide/motor-power.html">Motor Power</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../power-and-electronics/motor-guide/motor-glossary.html">Motor Glossary</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../power-and-electronics/servo-guide/index.html">Servo Guide</a><input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" role="switch" type="checkbox"/><label for="toctree-checkbox-15"><div class="visually-hidden">Toggle navigation of Servo Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../power-and-electronics/servo-guide/choosing-servo.html">Choosing a Servo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../power-and-electronics/servo-guide/usage-tips.html">Servo Usage Tips</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../power-and-electronics/sensor-glossary.html">Sensor Glossary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../power-and-electronics/tips-and-tricks.html">Советы и Рекомендации</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../software/index.html">Программирование</a><input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" role="switch" type="checkbox"/><label for="toctree-checkbox-16"><div class="visually-hidden">Toggle navigation of Программирование</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../software/getting-started/index.html">Введение</a><input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" role="switch" type="checkbox"/><label for="toctree-checkbox-17"><div class="visually-hidden">Toggle navigation of Введение</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../software/getting-started/fundamental-concepts.html">Fundamental Concepts of Programming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/getting-started/options-for-programming.html">Options for Programming</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/getting-started/linear-opmode-vs-opmode.html">LinearOpMode vs OpMode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/getting-started/common-hardware-components.html">Reading and Writing to Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/getting-started/using-android-studio.html">Using Android Studio</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/getting-started/common-issues.html">Common Issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../software/tutorials/index.html">Tutorials</a><input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" role="switch" type="checkbox"/><label for="toctree-checkbox-18"><div class="visually-hidden">Toggle navigation of Tutorials</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../software/tutorials/mecanum-drive.html">Mecanum TeleOp</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/tutorials/gamepad.html">Gamepad Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/tutorials/using-telemetry.html">Using Telemetry</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/tutorials/encoders.html">Encoders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/tutorials/bulk-reads.html">Bulk Reads</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/tutorials/vision.html">Computer Vision</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../software/concepts/index.html">Programming Concepts</a><input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" role="switch" type="checkbox"/><label for="toctree-checkbox-19"><div class="visually-hidden">Toggle navigation of Programming Concepts</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../software/concepts/control-loops.html">Control Loops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/concepts/finite-state-machines.html">Finite State Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/concepts/kinematics.html">Kinematics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/concepts/odometry.html">Odometry</a></li>
+</ul>
+</li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../software/adv-control-system/index.html">Advanced Control System</a><input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" role="switch" type="checkbox"/><label for="toctree-checkbox-20"><div class="visually-hidden">Toggle navigation of Advanced Control System</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l3"><a class="reference internal" href="../software/adv-control-system/control-system-internals.html">Control System Electronics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/adv-control-system/sdk-communication.html">SDK Communication</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/adv-control-system/sdk-motors.html">SDK Motors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/adv-control-system/sdk-servos.html">SDK Servos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/adv-control-system/sdk-sensors.html">SDK Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/adv-control-system/lynx-module.html">Lynx Module</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../software/software-glossary.html">Словарь Программной Части</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../awards/index.html">Awards</a><input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" role="switch" type="checkbox"/><label for="toctree-checkbox-21"><div class="visually-hidden">Toggle navigation of Awards</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../awards/award-types.html">Types of Awards</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../awards/portfolio.html">Инженерное Портфолио</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../awards/judging-presentation.html">The Judging Process and Presentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../awards/notebook.html">Notebook Designs and Decisions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../useful-resources.html">Useful Resources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../appendix/index.html">Appendix</a><input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" role="switch" type="checkbox"/><label for="toctree-checkbox-22"><div class="visually-hidden">Toggle navigation of Appendix</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/gallery.html">Gallery Of Robot Designs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/vendor-list.html">Vendor List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/vendor-guide.html">Vendor Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../appendix/license.html">License</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../contributing/index.html">Contributor’s Guide</a><input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" role="switch" type="checkbox"/><label for="toctree-checkbox-23"><div class="visually-hidden">Toggle navigation of Contributor’s Guide</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/style-guide.html">Style Guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/methods-of-contributing.html">Methods of Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/contributors.html">Contributors</a></li>
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="../../_sources/docs/custom-manufacturing/3d-printing.rst.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section id="d-printing">
+<h1>3D-печать<a class="headerlink" href="#d-printing" title="Ссылка на этот заголовок">¶</a></h1>
+<section id="kinds-of-3d-printing">
+<h2>Виды 3D печати<a class="headerlink" href="#kinds-of-3d-printing" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Существует несколько различных видов 3D-печати. FDM (Моделирование Наплавленного Осаждения), также известная как FFF (Изготовление Плавленой Нити Накала) предполагает выдавливание расплавленного филамента для создания детали. Это наиболее распространённый тип печати, на котором мы сосредоточимся в этом руководстве. SLA (стереолитография) и SLS (селективное лазерное спекание) — это варианты 3D-печати пластиком, но они, как правило, более сложные, дорогие или имеют другие недостатки применения в FTC®. По этим причинам они не рекомендуются.</p>
+<p>3D-печать металлом (SLS и другие) также становится все более доступной, однако не входит в рамки данного руководства.</p>
+<div class="admonition tip">
+<p class="admonition-title">Совет</p>
+<p>Рекомендуем ознакомиться с разделом о 3D-печати в документации FTC &lt;<a class="reference external" href="https://ftc-docs.firstinspires.org/en/latest/manufacturing/3d_printing/index.html">https://ftc-docs.firstinspires.org/en/latest/manufacturing/3d_printing/index.html</a>&gt;_ — руководством по FDM 3D-печати в рамках FTC. В нём рассматриваются такие темы, как: адгезия к столу, допуски, моделирование под 3D-печать, калибровка и выбор оборудования.</p>
+</div>
+</section>
+<section id="advantages-of-3d-printing">
+<h2>Преимущества 3D-печати<a class="headerlink" href="#advantages-of-3d-printing" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li><p>3D-печать позволяет создавать детали нестандартных размеров и добиваться идеальной оптимизации. Например, команды могут напечатать бобину строго определённого диаметра для максимальной скорости или шкив для ременной передачи с заданным количеством зубьев.</p></li>
+<li><p>3D-печать позволяет командам легко комбинировать готовые наборы и отдельные детали, поскольку не все комплекты имеют регулируемые крепления или кронштейны. Хорошим примером служат переходные втулки для механических колес Nexus <a class="reference internal" href="../common-mechanisms/drivetrains/holonomic.html#term-Mecanum-Wheel"><span class="xref std std-term">mecanum</span></a> , которые команды печатают на 3D-принтерах.</p></li>
+<li><p>3D-печать позволяет изготавливать детали, которые в противном случае было бы невозможно сделать из таких материалов, как алюминий, из-за ограничений в механической обработке.</p></li>
+<li><p>3D-печать позволяет командам создавать кастомную защиту проводов и соединений от механических нагрузок. Это отличный проект, который определённо стоит вашего времени.</p></li>
+</ul>
+</section>
+<section id="disadvantages-of-3d-printing">
+<h2>Недостатки 3D-печати<a class="headerlink" href="#disadvantages-of-3d-printing" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li><p>** Если на соревнованиях у вас закончились запасные части, напечатанные на 3D-принтере, скорее всего, вам не повезло. Командам рекомендуется распечатать как минимум по одному комплекту каждой детали, напечатанной на 3D-принтере, в качестве запасных частей для соревнований <a href="#id1"><span class="problematic" id="id2">**</span></a>.</p></li>
+<li><p>3D-печатные компоненты обычно слабее других материалов, таких как алюминий. Однако печать в правильной ориентации может быть очень прочной - команды напечатали 3D-крюки и другие детали для поддержки робота FRC® (120 фунтов) и роботов FTC (40 фунтов).</p></li>
+<li><p>Детали, напечатанные на 3D-принтере, должны быть нагружены только в одной ориентации. То есть, если робот подвешен на крюке, нагрузка должна приходиться только на нижнюю часть изогнутого крюка. Старайтесь по возможности исключить боковые нагрузки, чтобы избежать поломки детали.</p></li>
+<li><p>Размер деталей, напечатанных на 3D-принтере, ограничен размером вашего стола для печати.</p></li>
+<li><p>Печать крупных и массивных деталей может занять много времени (например, всю ночь) и сопряжена с высоким риском неудачи.</p></li>
+<li><p>3D-печать может оказаться довольно дорогостоящей, хотя филамент можно найти по разумной цене у онлайн-продавцов, таких как Amazon.</p></li>
+</ul>
+</section>
+<section id="common-filaments">
+<h2>Обычные Филаменты<a class="headerlink" href="#common-filaments" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Практически для любой детали, которую необходимо напечатать для FTC, <strong>PLA (или PLA+, Pro и т.д.) и/или PETG удовлетворят все требования по прочности, долговечности и внешнего вида.</strong> Эти два типа филамента являются безусловно самыми простыми в печати и продаются многими производителями по разумным ценам. Большинство других материалов предлагают весьма специфические преимущества (как, например, TPU), которые достигаются ценой дополнительных усилий, времени и денег.</p>
+<div class="admonition danger">
+<p class="admonition-title">Опасно</p>
+<p>Если нагревательный элемент вашего принтера (часть, в которой расплавляется филамент) имеет подкладку из ПТФЭ (Тефлон), где трубка из ПТФЭ проходит до самого термоблока (часто используется в недорогих принтерах, таких как Ender 3 и его модификациях), то вам <strong>не следует печатать при или выше температуры 250 градусов Цельсия</strong>. Это приведет к разрушению и расплавлению трубки из ПТФЭ, что приведет к выделению токсичных паров. Если вам нужно печатать при таких температурах и у вас есть нагревательный элемент с покрытием из ПТФЭ, вы можете перейти на цельнометаллический нагревательный элемент.</p>
+</div>
+<section id="pla-polylactic-acid">
+<h3>PLA (Полимолочная Кислота)<a class="headerlink" href="#pla-polylactic-acid" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Наиболее распространенным филаментом для 3D-печати является полимолочная кислота, или PLA. Это пластик, изготовленный из биологических материалов, таких как кукурузный крахмал и сахарный тростник. PLA является жестким, но более хрупким, чем другие виды филаментов, и при печати практически не деформируется. PLA хорошо подходит для большинства деталей робота, но может плохо выдерживать ударные нагрузки (удары по деталям), и поэтому такие детали должны быть смоделированы соответствующим образом.</p>
+<ul class="simple">
+<li><p>Температура в хотенде для PLA варьируется от 190°-230° C</p></li>
+<li><p>Температура стола для PLA варьируется в пределах 20°-60° C, но подогрев стола не является обязательным условием для PLA.</p></li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Совет</p>
+<p>Из-за относительно низкой температуры плавления PLA не рекомендуется оставлять детали из этого материала в таких местах, как закрытый автомобиль на жаре, так как это может вызвать сильную деформацию деталей.</p>
+</div>
+<p>Существует множество разновидностей PLA, продаваемых разными производителями, например, PLA+ или PLA Pro. В состав этих филаментов входят различные добавки, улучшающие прочность, пригодность для печати и другие свойства. Хотя эти продукты стоят дороже, они могут значительно улучшить характеристики PLA и скрыть его недостатки.</p>
+</section>
+<section id="petg-polyethylene-terephthalate-glycol">
+<h3>PETG (полиэтилентерефталатгликоль)<a class="headerlink" href="#petg-polyethylene-terephthalate-glycol" title="Ссылка на этот заголовок">¶</a></h3>
+<p>PETG можно охарактеризовать как усиленную версию PLA. Печатать им не сложно, но он часто дает заметно большее образование нитей и другие мелкие дефекты. Хотя предел прочности при растяжении у PETG технически ниже, чем у PLA, он гораздо менее хрупкий и лучше выдерживает удары за счет небольшого изгиба. Это отличный вариант для деталей FTC, которые должны быть ударопрочными, в тех случаях, когда PLA не справляется. Более высокая термостойкость PETG также означает, что он не деформируется при высоких температурах окружающей среды, например, в раскаленной машине.</p>
+<div class="admonition warning">
+<p class="admonition-title">Предупреждение</p>
+<p>PETG известен очень сильной адгезией к поверхности стола для печати, особенно к стеклу и PEI, и может вырывать куски материала из рабочей поверхности. Перед печатью рекомендуется нанести слой клея-карандаша или лака для волос.</p>
+</div>
+<ul class="simple">
+<li><p>Температурный диапазон хотенда PETG составляет 230°-260° C.</p></li>
+<li><p>Температура стола для PETG варьируется от 60°-80° C</p></li>
+</ul>
+</section>
+</section>
+<section id="less-common-filaments">
+<h2>Менее Распространенные Филаменты<a class="headerlink" href="#less-common-filaments" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Данные типы филаментов используются реже, чем упомянутые выше, но также могут найти множество применений в FTC роботах. Обычно их выбирают из-за специфических свойств, таких как гибкость или повышенная прочность. Однако их печать часто сопряжена со значительными трудностями: некоторые принтеры не могут работать с ними без дополнительной настройки, а стоимость таких материалов может быть существенно выше.</p>
+<section id="abs-acrylonitrile-butadiene-styrene">
+<h3>ABS (Акрилонитрилбутадиенстирол)<a class="headerlink" href="#abs-acrylonitrile-butadiene-styrene" title="Ссылка на этот заголовок">¶</a></h3>
+<p>ABS раньше был стандартным материалом для печати до появления PLA в коммерческом доступе. Вы наверняка сталкивались с ABS в деталях LEGO®. Этот материал выдерживает высокие нагрузки и обладает хорошей пластичностью. Однако за это приходится расплачиваться сложностью печати: часто требуется термокамера для поддержания температуры окружающей среды и предотвращения сильной деформации деталей. Поскольку аналогичное улучшение прочности по сравнению с PLA проще достичь с помощью PETG, ABS не так распространён в FTC. Тем не менее, ABS вполне доступен по цене и продаётся по тем же ценам, что и PLA..</p>
+<ul class="simple">
+<li><p>Температурный диапазон хотенда ABS составляет 230°-250° C</p></li>
+<li><p>Температура стола ABS варьируется в пределах 100°-120° C</p></li>
+<li><p>Для предотвращения деформации настоятельно рекомендуется использовать термокамеру.</p></li>
+</ul>
+<p>Из-за сложностей печати ABS и его ограничений стоит рассмотреть альтернативы, такие как ASA, которые обладают схожими свойствами, но значительно лучшей технологичностью.</p>
+</section>
+<section id="tpu-tpe-thermoplastic-polyurethane-thermoplastic-elastomer">
+<h3>TPU/TPE (Термопластичный полиуретан/Термопластичный эластомер)<a class="headerlink" href="#tpu-tpe-thermoplastic-polyurethane-thermoplastic-elastomer" title="Ссылка на этот заголовок">¶</a></h3>
+<p>TPU и TPE — это распространенные типы филаментов, широко используемые благодаря своей гибкости. Они позволяют создавать детали, которые могут легко сгибаться и деформироваться. Эти материалы продаются с разными показателями дюрометра (мера твёрдости/гибкости материала по шкале Шора). Высокая ударная вязкость и отличная адгезия слоев делают TPU/TPE не только универсальным, но и исключительно прочным материалом. В FTC команды используют TPU/TPE для таких элементов, как напечатанные элементы для активного захвата вместо трубок, а также для изготовления несиловых приводных ремней.</p>
+<div class="admonition tip">
+<p class="admonition-title">Совет</p>
+<p>Из-за гибкой природы этих материалов принтерам с экструдером типа Bowden, где привод вынесен отдельно от хотенда, печатать TPU/TPE крайне сложно.</p>
+</div>
+<ul class="simple">
+<li><p>Температура хотенда TPU/TPE варьируется от 210°-250° C</p></li>
+<li><p>Для печати TPU/TPE обычно не требуется подогреваемый стол, но если он используется, температура не должна превышать 60 °C — это может привести к спеканию материала с поверхностью стола.</p></li>
+<li><p>TPU/TPE обладают высокой гигроскопичностью и активно поглощают влагу из воздуха, поэтому обычно требуют просушки перед печатью, а иногда и в процессе печати.</p></li>
+<li><p>Настоятельно рекомендуется использовать экструдер с прямой подачей</p></li>
+</ul>
+</section>
+</section>
+<section id="exotic-filaments">
+<h2>Специализированные Виды Филаментов<a class="headerlink" href="#exotic-filaments" title="Ссылка на этот заголовок">¶</a></h2>
+<p>В FTC эти материалы практически не находят применения. Несмотря на превосходные механические свойства, позволяющие деталям выдерживать экстремальные нагрузки и воздействие неблагоприятных условий окружающей среды, их использование сопряжено с существенными трудностями. Все эти филаменты значительно дороже упомянутых выше аналогов, при этом создают множество проблем при печати.</p>
+<section id="nylon">
+<h3>Нейлон<a class="headerlink" href="#nylon" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Нейлоновые филаменты могут быть стеклонаполненными, углеволоконными или чистыми. Нейлон считается лидером по ударопрочности во многих ситуациях, где деталь может упруго деформироваться, а не ломаться полностью. Его часто используют для таких деталей, как крышки колес в колесной базе и в местах, где он может подвергаться многократным ударам и повреждениям. Для печати нейлоном требуются очень высокие температуры, обычно необходима термокамера, а материал обязательно нужно просушивать перед печатью (и во время нее).</p>
+<ul class="simple">
+<li><p>Температура нагрева нейлона варьируется от 240°-260° C</p></li>
+<li><p>Температура стола для нейлона варьируется от 55°-80° C</p></li>
+<li><p>Нейлон печально известен тем, что впитывает влагу из воздуха, и его следует тщательно высушивать до и во время печати. Несоблюдение этого требования, вероятно, приведет к тому, что деталь будет практически непригодна для использования.</p></li>
+<li><p>Рекомендуется использование термокамеры</p></li>
+</ul>
+</section>
+<section id="carbon-fiber-filled">
+<h3>Наполненный углеродным волокном<a class="headerlink" href="#carbon-fiber-filled" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Многие филаменты также выпускаются с добавлением частиц углеродного волокна, которые вводятся в состав самого материала. Хотя их часто считают средством радикального повышения прочности, на самом деле такие филаменты предназначены в первую очередь для увеличения жёсткости и улучшения технологичности печати материалов наподобие нейлона. Углеволоконные филаменты, как правило, требуют более высоких температур и сопла из закалённой стали, но если ваш принтер справляется с чистыми версиями этих материалов, то и с их углеволоконными аналогами проблем возникнуть не должно.</p>
+</section>
+<section id="polycarbonate-pc">
+<h3>Поликарбонат (PC)<a class="headerlink" href="#polycarbonate-pc" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Поликарбонат и его разновидности — это исключительно прочные технические материалы. Главное преимущество PC заключается в его высокой прочности и возможности превосходно выдерживать ударные нагрузки. Однако для работы с ним требуются тщательная сушка, принтер, способный работать при <strong>очень</strong> высоких температурах, и термокамера. Это чрезвычайно сложный в печати материал, к тому же обычно весьма дорогой. В FTC практически нет причин использовать детали из поликарбоната, поскольку ни одна из задач соревнований не требует его прочностных характеристик.</p>
+<p>Существует несколько смесей на основе поликарбоната, которые печатать значительно проще. Яркий пример — материал PolyMax PC от PolyMaker. Это более простой в печати PC-материал с пониженной температурой обработки, сохраняющий большинство преимуществ чистого поликарбоната. Модель PolyLite обладает не столь высокой ударной вязкостью, но существенно дешевле. Оба варианта печатать намного проще, чем чистый поликарбонат.</p>
+<ul class="simple">
+<li><p>Температура хотенда PC варьируется от 250°-320° C</p></li>
+<li><p>Температура стола для PC варьируется от 80°-140° C</p></li>
+<li><p>Обязательно использование термокамеры</p></li>
+<li><p>Обязательная сушка филамента</p></li>
+</ul>
+</section>
+<section id="high-end-exotic-filaments">
+<h3>Высококлассные специализированные филаменты<a class="headerlink" href="#high-end-exotic-filaments" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Существуют и другие материалы, которые могут обеспечивать высококлассные преимущества и расширять границы возможностей 3D-печати, но их не стоит использовать, если вы не <em>очень</em> уверены в своих навыках печати. В FTC они практически не находят применения. К таким материалам относятся, но не ограничиваются: Delrin (полиоксиметилен, гомополимер ацеталя), PEI (полиэфиримид, коммерческое название ULTEM), PEEK (полиэфирэфиркетон) и PEKK (полиэфиркетонкетон). Эти материалы чрезвычайно сложны в печати, требуют невероятно высоких температур (некоторые - до такой степени, что начинает плавиться даже закалённое стальное сопло) и стоят очень дорого.</p>
+</section>
+</section>
+<section id="d-printing-design-guide">
+<h2>Руководство По Проектированию Для 3D-печати<a class="headerlink" href="#d-printing-design-guide" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Вот краткое руководство по проектированию деталей для 3D-печати, которое, как мы надеемся, поможет командам, только начинающим работать с 3D-моделированием.</p>
+<p>Первое, что следует учитывать при проектировании деталей для 3D-печати — это ориентация модели на столе. Она определяется той стороной, которая контактирует с поверхностью стола для печати. В идеале деталь должна иметь плоское основание для максимальной площади контакта со столом, что обеспечивает лучшее сцепление.</p>
+<div class="admonition tip">
+<p class="admonition-title">Совет</p>
+<p>Максимальная площадь контакта с столом для печати обеспечивает лучшее сцепление, предотвращая отслаивание и деформацию детали во время печати, что в итоге повышает общее качество результата.</p>
+</div>
+<p>Если деталь не имеет плоской поверхности для печати, простое решение — разделить её на несколько частей по столу. Например, приведенная ниже пластина редуктора не имела плоской стороны для печати, поэтому была разрезана пополам. В дальнейшем части были соединены с помощью винтов и клея для пластика. Если бы эта пластина была напечатана как единое целое, потребовалось бы использование поддержек для создания всех необходимых отверстий. Избегание поддержек позволяет минимизировать расход материала.</p>
+<a class="reference internal image-reference" href="../../_images/2-piece-gearbox.jpg"><img alt="3D-печатный редуктор, напечатанный 2-мя частями с разрезом по плоскости" class="align-center" src="../../_images/2-piece-gearbox.jpg" style="width: 6.25em; height: 499.75px;" /></a>
+<div class="admonition tip">
+<p class="admonition-title">Совет</p>
+<p>Не снимайте фаски и не закругляйте ничего по периметру первого слоя на нижней поверхности детали. Снятие фаски или закругления увеличит вероятность деформации детали, особенно на столах для печати без нагрева.</p>
+</div>
+<section id="draft-angle">
+<h3>Угол Наклона<a class="headerlink" href="#draft-angle" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Угол наклона— это угол между боковой поверхностью детали и нормалью к столу печати. Максимальный угол наклона - это максимальный угол, под которым принтер может печатать без использования поддержек, и зависит от конкретного принтера, настроек печати (особенно скорости, температуры и охлаждения) и типа филамента. Для минимизации поддержек проверяйте все углы наклона в модели и убедитесь, что их угол не превышает максимально допустимого. Соблюдение этого предела также снижает риск деформации детали.</p>
+</section>
+<section id="stress-vectors">
+<h3>Векторы Напряжения<a class="headerlink" href="#stress-vectors" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Пожалуй, ключевым аспектом при проектировании являются векторы напряжений. 3D-печатные детали по своей природе обладают повышенной прочностью в двух осях и пониженной — в третьей. Эта «слабая ось» обусловлена самой слоистой структурой FDM-печати. Частично проблему можно решить повышением температуры печати до определенного предела, пока не начнет страдать качество, но более эффективный метод — повторное разделение детали на части. Основная идея заключается в увеличении прочности за счет оптимизации геометрии детали в плоскости её печати. Например, представленная ниже сборка отвечала за подвес всего робота и требовала максимально возможной прочности для 3D-печатной детали.</p>
+<div class="admonition tip">
+<p class="admonition-title">Совет</p>
+<p>Может показаться нелогичным разбивать деталь на несколько частей для увеличения прочности, но в этом есть логика.</p>
+</div>
+<p>Данную деталь можно было бы легко напечатать цельной, но её прочность оказалась бы недостаточной при нагрузках, направленных вверх. Разделение детали и создание новых плоских поверхностей для печати позволяет усилить каждую из осей. При выходе из строя небольшого компонента робот сохранит частичную работоспособность, что предпочтительнее полного разрушения всей конструкции. В данном примере боковые элементы были напечатаны отдельно с ориентацией на перпендикулярных осях для повышения общей прочности сборки.</p>
+<a class="reference internal image-reference" href="../../_images/printing-multipart.jpg"><img alt="3D-печать сборки из нескольких частей" class="align-center" src="../../_images/printing-multipart.jpg" style="width: 6.25em; height: 281.25px;" /></a>
+<a class="reference internal image-reference" href="../../_images/assembled-multipart.jpg"><img alt="Собранная версия того, что было напечатано на предыдущем изображении" class="align-center" src="../../_images/assembled-multipart.jpg" style="width: 6.25em; height: 355.25px;" /></a>
+<p>Эта сборка является хорошим примером учета ориентации деталей, углов наклона и векторов напряжений в каждой детали конструкции. Сложные детали можно сделать прочными и без какой-либо поддержки, просто правильно разделив их.</p>
+</section>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="machining.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Machining</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="materials-guide.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Materials Guide</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; Game Manual 0 Contributors |  Hosting Graciously Provided By //Copperforge
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">3D-печать</a><ul>
+<li><a class="reference internal" href="#kinds-of-3d-printing">Виды 3D печати</a></li>
+<li><a class="reference internal" href="#advantages-of-3d-printing">Преимущества 3D-печати</a></li>
+<li><a class="reference internal" href="#disadvantages-of-3d-printing">Недостатки 3D-печати</a></li>
+<li><a class="reference internal" href="#common-filaments">Обычные Филаменты</a><ul>
+<li><a class="reference internal" href="#pla-polylactic-acid">PLA (Полимолочная Кислота)</a></li>
+<li><a class="reference internal" href="#petg-polyethylene-terephthalate-glycol">PETG (полиэтилентерефталатгликоль)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#less-common-filaments">Менее Распространенные Филаменты</a><ul>
+<li><a class="reference internal" href="#abs-acrylonitrile-butadiene-styrene">ABS (Акрилонитрилбутадиенстирол)</a></li>
+<li><a class="reference internal" href="#tpu-tpe-thermoplastic-polyurethane-thermoplastic-elastomer">TPU/TPE (Термопластичный полиуретан/Термопластичный эластомер)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#exotic-filaments">Специализированные Виды Филаментов</a><ul>
+<li><a class="reference internal" href="#nylon">Нейлон</a></li>
+<li><a class="reference internal" href="#carbon-fiber-filled">Наполненный углеродным волокном</a></li>
+<li><a class="reference internal" href="#polycarbonate-pc">Поликарбонат (PC)</a></li>
+<li><a class="reference internal" href="#high-end-exotic-filaments">Высококлассные специализированные филаменты</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#d-printing-design-guide">Руководство По Проектированию Для 3D-печати</a><ul>
+<li><a class="reference internal" href="#draft-angle">Угол Наклона</a></li>
+<li><a class="reference internal" href="#stress-vectors">Векторы Напряжения</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="../../_static/documentation_options.js?v=e3d86535"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="../../_static/translations.js?v=9bfe3ffa"></script>
+    <script src="../../_static/design-tabs.js?v=f930bc37"></script>
+    </body>
+</html>
